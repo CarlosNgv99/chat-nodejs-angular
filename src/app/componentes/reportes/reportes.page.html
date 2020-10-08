@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="start" fill="clear" (click)="return()">
+      <ion-icon style="color:white" name="arrow-round-back"></ion-icon>
+    </ion-button>
+    <ion-title>Reportes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <br>
+    <ion-button expand="block" (click)="reporte1()" >
+      <ion-icon slot="start" name="trash" color="secondary"></ion-icon>
+      Mensajes Eliminados
+    </ion-button>
+    <br>
+
+    <ion-button expand="block">
+      <ion-icon slot="start" name="mail" color="secondary"></ion-icon>
+      Usuarios: Más Mensajes Enviados
+    </ion-button>
+    <br>
+    <ion-button expand="block">
+      <ion-icon slot="start" name="mail-open" color="secondary"></ion-icon>
+      Usuarios: Más Mensajes Recibidos
+    </ion-button>
+    <br>
+    <ion-button expand="block">
+      <ion-icon slot="start" name="list-box" color="secondary"></ion-icon>
+      Usuarios: Más Conversaciones
+    </ion-button>
+  </ion-list>
+</ion-content>

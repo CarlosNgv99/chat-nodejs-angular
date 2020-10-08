@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-button (click)="return()" slot="start" color="secondary" fill="clear">
+        <ion-icon style="color:white; font-size:25px" name="arrow-round-back"></ion-icon>
+      </ion-button>
+      <ion-title>Contactos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <div>
+      <ion-card (click)="addSala(contact.usuario)" *ngFor="let contact of contacts">
+        <ion-card-content class="ion-text-center">
+          <h1>{{contact.usuario}}</h1>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  
+  
+  </ion-content>
+  

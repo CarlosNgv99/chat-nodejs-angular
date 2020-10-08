@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-button slot="start" fill="clear" (click)="return()">
+            <ion-icon style="color:white" name="arrow-round-back"></ion-icon>
+          </ion-button>
+      <ion-title text-center>
+        Mensajes Eliminados  
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <div>
+        <ion-card  *ngFor="let mensaje of mensajes">
+          <ion-card-content>
+            <h4>{{mensaje.nombreEmisor}}:</h4>
+              <h2 >{{mensaje.contenido}}</h2>
+              <h3 >{{mensaje.fecha_envio}}</h3>
+          </ion-card-content>
+        </ion-card>
+      </div>
+</ion-content>

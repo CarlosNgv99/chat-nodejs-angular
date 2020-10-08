@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="end" fill="clear" (click)="presentActionSheet()">
+      <ion-icon style="color:white" name="menu"></ion-icon>
+    </ion-button>
+    <ion-title>Administrador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img class="icon" src="assets/icon/user.svg" alt="">
+
+  <ion-list>
+      <br>
+    <ion-button expand="block" (click)="adminUsuarios()">
+      <ion-icon slot="start" name="hammer" color="secondary"></ion-icon>
+      Administrar Usuarios
+    </ion-button>
+    <br>
+
+    <ion-button (click)="adminChats()" expand="block">
+      <ion-icon slot="start" name="trash" color="secondary"></ion-icon>
+      Eliminar Conversación
+    </ion-button>
+    <br>
+    <ion-button (click)="reportes()" expand="block">
+      <ion-icon slot="start" name="list" color="secondary"></ion-icon>
+      Reportes
+        </ion-button>
+  </ion-list>
+</ion-content>

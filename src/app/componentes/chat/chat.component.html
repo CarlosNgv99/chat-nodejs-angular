@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button (click)="closeChat()" slot="start" color="secondary" fill="clear">
+      <ion-icon style="color:white; font-size:25px" name="arrow-round-back"></ion-icon>
+    </ion-button>
+    <ion-title>{{chat.nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div>
+    <ion-card  *ngFor="let mensaje of mensajes">
+      <ion-card-content>
+        <ion-button style="margin-left: 200px;" *ngIf="!mensaje.estado_eliminado" (click)="delete(mensaje.contenido)" color="danger">
+          Eliminar
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+        <h4>{{mensaje.nombreEmisor}}:</h4>
+          <h2 *ngIf="!mensaje.estado_eliminado">{{mensaje.contenido}}</h2>
+          <h2 *ngIf="mensaje.estado_eliminado">{{mensaje.contenido_eliminado}}</h2>
+          <h3 *ngIf="!mensaje.estado_eliminado">{{mensaje.fecha_envio}}</h3>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+</ion-content>
+
+<ion-footer padding>
+  <ion-item>
+    <ion-textarea [(ngModel)]="msg"></ion-textarea>
+    <ion-button color="success" (click)="sendMessage()">
+      <ion-icon name="send"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-footer>

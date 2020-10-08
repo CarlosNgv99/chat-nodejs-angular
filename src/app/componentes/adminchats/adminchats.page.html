@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-button (click)="return()" slot="start" color="secondary" fill="clear">
+        <ion-icon style="color:white; font-size:25px" name="arrow-round-back"></ion-icon>
+      </ion-button>
+      
+      <ion-title>Administración Chats</ion-title>
+    </ion-toolbar>
+  </ion-header> 
+  <ion-card *ngFor="let chat of chats">
+      <ion-card-content class="ion-text-center">
+          <h1>{{chat.nombre}}</h1>
+          <h1>{{chat.idSALA}}</h1>
+
+          <ion-button (click)="getChat(chat.nombre)" expand="block" >
+              <ion-icon slot="end" name="trash"></ion-icon>
+              Eliminar 
+            </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+  
+  <ion-content padding>
+    
+  </ion-content>
